@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head><title>Tabbing test</title></head>
+<body>
+  <p>
+    The quick brown <a id="tab-trap" href="https://en.wikipedia.org/wiki/Fox">fox</a> jumped over the lazy <a href="https://en.wikipedai.org/wiki/Dog">dog.</a>
+  </p>
+<script>
+  const trap = document.getElementById('tab-trap');
+  trap.addEventListener('keydown', (event) => {
+    console.log(event.key);
+    if (event.key === 'Tab') {
+      event.preventDefault();
+    }
+  });
+</script>
+</body>
+</html>
